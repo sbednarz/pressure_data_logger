@@ -129,9 +129,11 @@ function refresh_gui() {
         if (this.readyState == 4 && this.status == 200) {
             if (this.responseText === 'STATUS_IDLE') {
                 set_gui_idle();
+                refresh_data();
             }
             if (this.responseText === 'STATUS_WORKING') {
                 set_gui_working();
+                refresh_data();
             }
         }
     };
